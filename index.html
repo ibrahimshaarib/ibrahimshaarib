@@ -9,6 +9,358 @@
   <link rel="stylesheet" href="css/pageStyle.css">
 
   <title>Index</title>
+  
+  
+  <style>
+    
+    body {
+  background: #f5f5f5;
+  line-height: 22px;
+  font-size: 20px;
+  font-family: sans-serif;
+  //font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.wrapper {
+  line-height: 32px;
+}
+
+.wrapper .main-col__title {
+  line-height: 32px;
+}
+
+
+
+
+
+@media (min-width: 360px) {
+
+
+#wrapper {
+  display: grid;
+  grid-gap: 10px;
+  //max-width: 800px;
+  //margin: 0 10px 0 10px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: minmax(150px auto);
+  background: #ffffff;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+header {
+  grid-column: 1/1;
+  grid-row: auto;
+  background: #000;
+  color: #fff;
+}
+
+.toggle, [id^=drop] {
+  display: none;
+}
+
+#logo {
+  display: block;
+   width: 200px;
+   padding: 20px 20px 20px 10px;
+  float: left;
+  font-size: 2em;
+  background: #000;
+}
+
+
+
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  float: right;
+  display: block;
+  position: relative;
+}
+
+nav li {
+  display: inline-block;
+  float: left;
+}
+
+nav a {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  padding: 20px 20px;
+  background: #000;
+
+}
+
+@media (max-width: 768px) {
+  .toggle+a, .menu {
+    display: none;
+  }
+
+  [id^=drop]:checked+ul {
+    display: block;
+  }
+
+  .toggle {
+    display: block;
+    padding: 30px 10px 20px 10px;
+    float: right;
+    cursor: pointer;
+    font-size: 2em;
+    color: #fff;
+    font-size: 50px;
+  }
+
+  nav {
+    margin: 0;
+  }
+
+  nav ul {
+    width: 100%;
+  }
+
+  nav li {
+    display: block;
+    width: 100%;
+    border: 1px solid #fff;
+    text-align: center;
+  }
+}
+
+
+main {
+  grid-column: 1/2;
+  grid-row: 2/2;
+}
+
+.main-col__context p,
+.aside-col__context {
+  padding: 0px 10px;
+
+}
+
+
+
+aside {
+  grid-column: 1/2;
+  grid-row: 3/3;
+}
+
+#card {
+  grid-column: 1/2;
+  grid-row: 4/4;
+}
+
+.card-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-col__content{
+  margin: 5px;
+  border: 1px solid silver;
+}
+
+.card-col__context {
+  padding: 10px;
+}
+
+.main-col__content,
+.aside-col__content{
+border: 1px solid silver;
+}
+
+footer {
+  grid-column: 1/1;
+  grid-row: auto;
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  //padding-top: 10px;
+}
+
+footer a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+  #wrapper {
+    margin: 30px;
+  }
+
+  #card {
+    grid-column: 1/2;
+    grid-row: 4/4;
+  }
+
+  .card-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-col__content{
+    margin: 5px;
+    border: 1px solid silver;
+  }
+
+  .card-col__context {
+    padding: 10px;
+  }
+
+  .main-col__content,
+  .aside-col__content{
+  border: 1px solid silver;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 800px) {
+  #wrapper {
+    display: grid;
+    grid-gap: 10px;
+    max-width: 960px;
+    margin: 0 auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(150px auto);
+    font-weight: normal;
+  }
+
+
+   #logo {
+       display: block;
+        width: 9em;
+        padding: 20px 20px 20px 10px;
+       float: left;
+       font-size: 2em;
+       background: #000;
+       color: #fff;
+   }
+
+main img,
+aside img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+  header {
+    grid-column: 1/-1;
+    grid-row: auto;
+    color: #fff;
+    background: #000;
+  }
+
+
+nav li {
+  padding-top: 30px;
+}
+
+
+  /* ===================  */
+  main {
+    grid-column: 1/9;
+    grid-row: 2/2;
+
+  }
+
+
+  /* =======================  */
+    aside {
+      grid-column: 9/13;
+      grid-row: 2/2;
+
+    }
+    /* =======================  */
+
+    #card {
+      grid-column: 1/13;
+      grid-row: 3/3;
+
+    }
+
+    #card img {
+      float: left;
+    }
+
+    .card-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .card-col__content {
+     margin: 0;
+     border: 1px solid silver;
+    }
+
+
+/* =======================  */
+
+
+
+
+  footer {
+    grid-column: 1/13;
+    grid-row: auto;
+    background: #000;
+    color: #fff;
+  }
+}
+
+   
+  </style>
+  
+  
+  
 </head>
 
 
